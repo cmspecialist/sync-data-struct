@@ -94,6 +94,7 @@ class Sync
         $diff = array_filter($this->handle->getDiffSql());
         $html = include $tpl;
         var_export($html);
+        return $diff;
     }
 
     public function toSqlFile()
