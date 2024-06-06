@@ -96,6 +96,12 @@ class Sync
         var_export($html);
     }
 
+    public function toArray()
+    {
+        $diff = array_filter($this->handle->getDiffSql());
+        return $diff;
+    }
+
     public function toSqlFile()
     {
         header("Content-type:text/html;charset=utf-8");
